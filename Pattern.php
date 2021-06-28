@@ -39,22 +39,21 @@ class Playlist implements MusicInterface
 		unset($this->tracks[$key]);
 	}
 
-	public function play()
+	public function play():string
 	{
 		return $this->tracks[$this->currentTrack]->play();
 	}
 
-	public function next()
+	public function next():string
 	{
 		if(isset($this->tracks[$this->currentTrack + 1]))
 		{
 			$this->currentTrack++;
-			return $this->play();
 		}
 		return $this->play();
 	}
 
-	public function previous()
+	public function previous():string
 	{
 		if($this->currentTrack > 0)
 		{
@@ -70,7 +69,7 @@ $Ivan -> addTrack(new Track('first song','ivan','/music/first song.mp3'));
 $Ivan -> addTrack(new Track('second song','andrew','/music/second song.mp3'));
 $Ivan -> addTrack(new Track('third song','denis','/music/third song.mp3'));
 //$Ivan -> deleteTrack('/music/third song.mp3');
-//print_r($Ivan);
+print_r($Ivan);
 echo $Ivan->play().PHP_EOL;
 echo $Ivan->next().PHP_EOL;
 echo $Ivan->next().PHP_EOL;
