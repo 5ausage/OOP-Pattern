@@ -36,22 +36,22 @@
 		switch($_POST['op'])
 		{
 			case "+":
-				$num = "+";
+				$num = $_POST['op'];
 				break;
 			case "-":
-				$num = "-";
+				$num = $_POST['op'];
 				break;
 			case "/":
-				$num = "/";
+				$num = $_POST['op'];
 				break;
 			case "x":
-				$num = "x";
+				$num = $_POST['op'];
 				break;
 			case "√":
-				$num = "√";
+				$num = $_POST['op'];
 				break;
 			case "^":
-				$num = "^";
+				$num = $_POST['op'];
 				break;
 		}
 	}
@@ -197,5 +197,6 @@
 		</center>
 	</body>
 </html>
+
 
 
